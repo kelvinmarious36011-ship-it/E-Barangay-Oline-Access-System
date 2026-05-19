@@ -115,8 +115,8 @@ clearOld();
 
         <div class="auth-demo-box">
             <strong>Demo Accounts</strong>
-            <div>Admin: admin@ebarangay.gov.ph / password</div>
-            <div>Resident: juan@example.com / password</div>
+            <div>Admin: admin@ebarangay.gov.ph </div>
+            <div>Resident: juan@example.com </div>
         </div>
     </div>
 </div>
