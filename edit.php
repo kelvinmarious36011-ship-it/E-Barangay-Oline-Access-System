@@ -1,12 +1,20 @@
 <?php
 require_once 'config.php';
 requireLogin();
+
+// Safety fallback: if the e() helper function isn't defined in config.php, define it here
+if (!function_exists('e')) {
+    function e($value) {
+        return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8');
+    }
+}
+
 $pageTitle = 'My Profile';
 $user = getCurrentUser();
 $userId = (int)$_SESSION['user_id'];
 
 $success = getFlash('success');
-$error   = getFlash('error');
+$error = getFlash('error'); // Fixed: Removed invisible spaces here
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
@@ -87,7 +95,6 @@ include_once 'includes/layout.php';
         <button class="tab-btn" data-tab="password">Change Password</button>
     </div>
 
-    <!-- PROFILE TAB -->
     <div class="tab-panel active" id="tab-profile">
         <div class="card">
             <div class="card-header"><h3>Personal Information</h3></div>
@@ -153,7 +160,6 @@ include_once 'includes/layout.php';
         </div>
     </div>
 
-    <!-- PASSWORD TAB -->
     <div class="tab-panel" id="tab-password">
         <div class="card">
             <div class="card-header"><h3>Change Password</h3></div>
