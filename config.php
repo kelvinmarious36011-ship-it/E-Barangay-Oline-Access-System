@@ -3,10 +3,10 @@
 // config.php — Database connection & helper functions
 // ============================================================
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'ebarangay');
+define('DB_HOST', 'sql206.infinityfree.com');
+define('DB_USER', 'if0_41960192');
+define('DB_PASS', 'Tue5tFbp5rn2IF');
+define('DB_NAME', 'if0_41960192_ebarangay');
 
 define('SITE_NAME', 'E-Barangay');
 define('SITE_FULL', 'E-Barangay Online Access System');
